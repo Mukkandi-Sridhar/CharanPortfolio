@@ -18,8 +18,12 @@ export function Project() {
   const { transformX1, transformX2, transformY } =
     useProjectSlider(containerRef);
 
-  const firstSlider = projectOptions.first.map(({ type, source, title }) => {
-    const id = randomId();
+  // Duplicate items for continuous infinite marquee loop
+  const firstItems = [...projectOptions.first, ...projectOptions.first];
+  const secondItems = [...projectOptions.second, ...projectOptions.second];
+
+  const firstSlider = firstItems.map(({ type, source, title }, idx) => {
+    const id = `${randomId()}-${idx}`;
     return (
       <ProjectSlider
         key={id}
@@ -31,8 +35,8 @@ export function Project() {
     );
   });
 
-  const secondSlider = projectOptions.second.map(({ type, source, title }) => {
-    const id = randomId();
+  const secondSlider = secondItems.map(({ type, source, title }, idx) => {
+    const id = `${randomId()}-${idx}`;
     return (
       <ProjectSlider
         key={id}
@@ -47,22 +51,28 @@ export function Project() {
   return (
     <section ref={containerRef} className='relative z-10 mt-10 overflow-hidden sm:mt-14'>
       <div className='grid items-center'>
-        <div className='bg-background overflow-hidden py-2'>
+        <div className='bg-background overflow-hidden py-4'>
+          {/* Top Slider Row - Auto scrolls slowly to left */}
           <motion.div
-            className='mb-4 flex gap-3 sm:mb-8 sm:gap-6 md:mb-10 md:gap-10'
-            style={{
-              width: '160vw',
-              x: transformX1,
+            className='mb-4 flex gap-3 sm:mb-8 sm:gap-6 md:mb-10 md:gap-10 w-max'
+            animate={{ x: ['0%', '-50%'] }}
+            transition={{
+              ease: 'linear',
+              duration: 35,
+              repeat: Infinity,
             }}
           >
             {firstSlider}
           </motion.div>
 
+          {/* Bottom Slider Row - Auto scrolls slowly to right */}
           <motion.div
-            className='mb-4 flex gap-3 sm:mb-8 sm:gap-6 md:mb-10 md:gap-10'
-            style={{
-              width: '160vw',
-              x: transformX2,
+            className='mb-4 flex gap-3 sm:mb-8 sm:gap-6 md:mb-10 md:gap-10 w-max'
+            animate={{ x: ['-50%', '0%'] }}
+            transition={{
+              ease: 'linear',
+              duration: 35,
+              repeat: Infinity,
             }}
           >
             {secondSlider}
