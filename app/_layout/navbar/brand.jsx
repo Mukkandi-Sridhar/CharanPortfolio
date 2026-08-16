@@ -11,13 +11,13 @@ export function NavbarBrand() {
 
       <div className='relative ms-2 flex overflow-hidden whitespace-nowrap transition-all duration-500 ease-in-expo group-hover:pe-8'>
         <h5 className='transition-transform duration-500 ease-in-expo group-hover:-translate-x-full'>
-          Code by
+          Edited by
         </h5>
-        <h5 className='ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-14'>
-          Dennis
+        <h5 className='ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-24'>
+          Kurni
         </h5>
-        <h5 className='absolute left-28 ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-14'>
-          Snellenberg
+        <h5 className='absolute left-32 ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-24'>
+          Charan Kumar
         </h5>
       </div>
     </div>

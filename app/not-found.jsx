@@ -4,7 +4,7 @@ import { Center } from '@/components';
 export const metadata = {
   title: '404',
   description:
-    'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
+    'Passionate Video Editor focused on creating engaging short-form content, Instagram Reels, YouTube Shorts, with storytelling, motion graphics, and sound design.',
 };
 
 export default function NotFound() {

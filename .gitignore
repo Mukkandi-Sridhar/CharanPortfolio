@@ -19,6 +19,8 @@
 # misc
 .DS_Store
 *.pem
+/Profile.png
+/Video*.mp4
 
 # debug
 npm-debug.log*

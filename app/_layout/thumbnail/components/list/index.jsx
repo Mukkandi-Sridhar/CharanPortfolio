@@ -46,7 +46,7 @@ export function ThumbnailList({
           >
             {title}
           </h4>
-          <p className='text-lg font-medium'>Design & Development</p>
+          <p className='text-lg font-medium'>Video Editing</p>
         </Link>
       </li>
     );

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MoveDownRight } from 'lucide-react';
-import { CldImage } from 'next-cloudinary';
+import Image from 'next/image';
 
 import { ParallaxSlider } from '@/components';
 
@@ -16,20 +16,24 @@ export function Header() {
       initial='initial'
       animate='enter'
     >
-      <CldImage
-        src='Dennis-Portfolio/images/lapetmmek4fymz68m4u8'
-        className='object-cover md:scale-125 md:object-contain'
+      <Image
+        src='/images/hero.png'
+        className='object-cover object-center'
         fill={true}
         sizes='100vw'
-        alt='Dennis Snellenberg Personal Picture'
+        alt='Kurni Charan Kumar'
+        priority
       />
 
-      <div className='relative flex h-full flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal'>
+      {/* Subtle Dark Gradient Overlay for Readability */}
+      <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/40 pointer-events-none' />
+
+      <div className='relative flex h-full flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal z-10'>
         <div className='select-none'>
-          <h1 className='text-[max(9em,15vw)]'>
+          <h1 className='text-[max(9em,15vw)] text-white drop-shadow-lg'>
             <ParallaxSlider repeat={4} baseVelocity={2}>
               <span className='pe-12'>
-                Dennis Snellenberg
+                Kurni Charan Kumar
                 <span className='spacer'>—</span>
               </span>
             </ParallaxSlider>
@@ -37,14 +41,14 @@ export function Header() {
         </div>
 
         <div className='md:ml-auto'>
-          <div className='mx-10 max-md:my-12 md:mx-36'>
+          <div className='mx-10 max-md:my-12 md:mx-36 text-white'>
             <div className='mb-4 md:mb-20'>
               <MoveDownRight size={28} strokeWidth={1.25} />
             </div>
 
-            <h4 className='text-[clamp(1.55em,2.5vw,2.75em)]'>
-              <span className='block'>Freelance</span>
-              <span className='block'>Designer &amp; Developer</span>
+            <h4 className='text-[clamp(1.55em,2.5vw,2.75em)] font-medium drop-shadow-md'>
+              <span className='block'>Video Editor</span>
+              <span className='block'>Short-Form Content Specialist</span>
             </h4>
           </div>
         </div>

@@ -1,22 +1,6 @@
 export const thumbnailOptions = [
-  {
-    href: '/fabric',
-    title: 'FABRIC™',
-    image: 'Dennis-Portfolio/images/hlz36eeb3ddfvqt9tex9',
-  },
-  {
-    href: '/aanstekelijk',
-    title: 'Aanstekelijk',
-    image: 'Dennis-Portfolio/images/aigt2q3xiqb8ovujzscc',
-  },
-  {
-    href: '/base-create',
-    title: 'Base Create',
-    image: 'Dennis-Portfolio/images/ahuzarh793qmv9sdveyk',
-  },
-  {
-    href: '/avvr',
-    title: 'AVVR',
-    image: 'Dennis-Portfolio/images/pzychyr1ans60gqlevhg',
-  },
+  { href: '#work', title: 'Instagram Reels', image: '/images/thumb-reels.jpg' },
+  { href: '#work', title: 'YouTube Shorts', image: '/images/thumb-shorts.jpg' },
+  { href: '#work', title: 'Brand & Social Ads', image: '/images/thumb-ads.jpg' },
+  { href: '#work', title: 'Motion Graphics', image: '/images/thumb-motion.jpg' },
 ];

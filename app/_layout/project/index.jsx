@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 import { motion } from 'framer-motion';
 
@@ -8,22 +8,40 @@ import { projectOptions } from '@/data';
 import { useProjectSlider } from '@/hooks';
 import { randomId } from '@/utils';
 
+import { VideoModal } from './modal';
 import { ProjectSlider } from './slider';
 
 export function Project() {
   /** @type {import('react').MutableRefObject<HTMLElement>} */
   const containerRef = useRef(null);
+  const [selectedVideo, setSelectedVideo] = useState(null);
   const { transformX1, transformX2, transformY } =
     useProjectSlider(containerRef);
 
-  const firstSlider = projectOptions.first.map(({ type, source }) => {
+  const firstSlider = projectOptions.first.map(({ type, source, title }) => {
     const id = randomId();
-    return <ProjectSlider key={id} type={type} source={source} />;
+    return (
+      <ProjectSlider
+        key={id}
+        type={type}
+        source={source}
+        title={title}
+        onSelect={() => setSelectedVideo({ source, title })}
+      />
+    );
   });
 
-  const secondSlider = projectOptions.second.map(({ type, source }) => {
+  const secondSlider = projectOptions.second.map(({ type, source, title }) => {
     const id = randomId();
-    return <ProjectSlider key={id} type={type} source={source} />;
+    return (
+      <ProjectSlider
+        key={id}
+        type={type}
+        source={source}
+        title={title}
+        onSelect={() => setSelectedVideo({ source, title })}
+      />
+    );
   });
 
   return (
@@ -59,6 +77,11 @@ export function Project() {
           }}
         />
       </div>
+
+      <VideoModal
+        video={selectedVideo}
+        onClose={() => setSelectedVideo(null)}
+      />
     </section>
   );
 }

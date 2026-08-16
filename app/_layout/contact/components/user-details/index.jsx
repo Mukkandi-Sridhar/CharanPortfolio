@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { ArrowDownLeft } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { CldImage } from 'next-cloudinary';
 
 import { MagneticButton } from '@/components';
 
@@ -19,11 +19,12 @@ export function UserDetails({ transformX }) {
       <Row>
         <div className='flex items-center gap-8'>
           <ImageWrapper>
-            <CldImage
-              src='Dennis-Portfolio/images/mqtwxh5znybowgaljrbp'
+            <Image
+              src='/images/profile.png'
               className='rounded-full object-cover'
               fill={true}
-              alt='Dennis Snellenberg Profile Picture'
+              sizes='100px'
+              alt='Kurni Charan Kumar Profile Picture'
             />
           </ImageWrapper>
           <MainTitle>Let’s work</MainTitle>
@@ -53,25 +54,25 @@ export function UserDetails({ transformX }) {
 
       <Row>
         <div className='flex w-full flex-col gap-4 lg:flex-row'>
-          <div>
-            <a href='mailto:info@dennissnellenberg.com'>
+          <div className='w-full lg:w-auto'>
+            <a href='mailto:charannedit82@gmail.com' className='block w-full'>
               <MagneticButton
                 variant='outline'
                 size='md'
-                className='w-full border-muted-foreground'
+                className='w-full border-muted-foreground whitespace-nowrap px-4 py-6 text-xs sm:px-8 sm:py-10 sm:text-base'
               >
-                info@dennissnellenberg.com
+                charannedit82@gmail.com
               </MagneticButton>
             </a>
           </div>
-          <div>
-            <a href='tel:+31627847430'>
+          <div className='w-full lg:w-auto'>
+            <a href='tel:+918790792645' className='block w-full'>
               <MagneticButton
                 variant='outline'
                 size='md'
-                className='w-full border-muted-foreground'
+                className='w-full border-muted-foreground whitespace-nowrap px-4 py-6 text-xs sm:px-8 sm:py-10 sm:text-base'
               >
-                +31 6 27 84 74 30
+                +91 87907 92645
               </MagneticButton>
             </a>
           </div>

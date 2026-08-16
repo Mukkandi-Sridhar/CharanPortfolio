@@ -3,7 +3,7 @@
 import { forwardRef } from 'react';
 
 import { motion } from 'framer-motion';
-import { CldImage } from 'next-cloudinary';
+import Image from 'next/image';
 
 import { Center } from '@/components';
 import { thumbnailOptions } from '@/data';
@@ -20,11 +20,12 @@ export const ThumbnailModal = forwardRef(
     const items = thumbnailOptions.map(({ title, image }) => {
       const id = randomId();
       return (
-        <Center key={id} className='h-full w-full'>
-          <CldImage
+        <Center key={id} className='relative h-full w-full'>
+          <Image
             src={image}
-            width={320}
-            height={320}
+            fill={true}
+            sizes='320px'
+            className='object-cover'
             alt={`${title} thumbnail image`}
           />
         </Center>

@@ -1,32 +1,32 @@
 /** @type {import('next').Metadata} */
 export const rootMetadata = {
-  metadataBase: new URL('https://dennis-snellenberg-portfolio.vercel.app/'),
+  metadataBase: new URL('https://kcharan-portfolio.vercel.app/'),
   title: {
-    template: '%s | Dennis Snellenberg',
-    default: 'Dennis Snellenberg • Freelance Designer & Developer',
+    template: '%s | Kurni Charan Kumar',
+    default: 'Kurni Charan Kumar • Freelance Video Editor',
   },
   description:
-    'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
-  generator: 'Dennis Snellenberg',
-  applicationName: 'Dennis Snellenberg',
+    'Passionate Video Editor focused on creating engaging short-form content, Instagram Reels, YouTube Shorts, with storytelling, motion graphics, and sound design.',
+  generator: 'Kurni Charan Kumar',
+  applicationName: 'Kurni Charan Kumar',
   referrer: 'origin-when-cross-origin',
-  keywords: ['Design', 'Develope', 'Freelance'],
+  keywords: ['Video Editing', 'Reels', 'Shorts', 'Motion Graphics'],
   authors: [
-    { name: 'Ali Bagheri', url: 'https://www.github.com/alibagheri2079' },
+    { name: 'Kurni Charan Kumar', url: 'https://kcharan-portfolio.vercel.app' },
   ],
-  creator: 'Ali Bagheri',
-  publisher: 'Ali Bagheri',
+  creator: 'Kurni Charan Kumar',
+  publisher: 'Kurni Charan Kumar',
   twitter: {
     card: 'summary_large_image',
-    title: 'Dennis Snellenberg',
+    title: 'Kurni Charan Kumar • Video Editor',
     description:
-      'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
-    siteId: '1467726470533754880',
-    creator: '@AliBagheri2079',
-    creatorId: '1467726470533754880',
+      'Passionate Video Editor focused on creating engaging short-form content, Instagram Reels, YouTube Shorts, with storytelling, motion graphics, and sound design.',
+    siteId: '',
+    creator: '@kcharanedits',
+    creatorId: '',
     images: {
-      url: 'https://dennis-snellenberg-portfolio.vercel.app/screenshot.png',
-      alt: 'Portfolio Screenshot',
+      url: 'https://kcharan-portfolio.vercel.app/screenshot.png',
+      alt: 'Kurni Charan Kumar Portfolio Screenshot',
     },
   },
   robots: {
