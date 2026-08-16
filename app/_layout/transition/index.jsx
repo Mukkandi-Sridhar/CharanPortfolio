@@ -1,31 +1,43 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { AnimatePresence } from 'framer-motion';
-import { usePathname } from 'next/navigation';
 
-import { useLenis, useTimeOut } from '@/hooks';
+import { useLenis } from '@/hooks';
 
 import { Preloader } from './preloader';
 
+const INTRO_STORAGE_KEY = 'kcharan-intro-played';
+
+function hasIntroPlayed() {
+  if (typeof window === 'undefined') return false;
+  return sessionStorage.getItem(INTRO_STORAGE_KEY) === 'true';
+}
+
 /** @param {import('react').PropsWithChildren<unknown>} */
 export function Transition({ children }) {
-  const [isLoading, setLoading] = useState(true);
-  const pathname = usePathname();
+  const [isLoading, setLoading] = useState(() => !hasIntroPlayed());
 
   useLenis();
-  useTimeOut({
-    callback: () => {
+
+  useEffect(() => {
+    if (!isLoading) {
+      return;
+    }
+
+    sessionStorage.setItem(INTRO_STORAGE_KEY, 'true');
+
+    const timeout = setTimeout(() => {
       setLoading(false);
       window.scrollTo(0, 0);
-    },
-    duration: 2000,
-    deps: [],
-  });
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  }, [isLoading]);
 
   return (
-    <div key={pathname} className='overflow-hidden'>
+    <div className='overflow-hidden'>
       <AnimatePresence mode='wait'>
         {isLoading ? <Preloader /> : null}
       </AnimatePresence>
