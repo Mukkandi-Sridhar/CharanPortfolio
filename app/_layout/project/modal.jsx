@@ -89,9 +89,19 @@ export function VideoModal({ video, onClose }) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className='fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-xl md:p-8'
+          className='fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 p-4 backdrop-blur-2xl md:p-8'
           onClick={onClose}
         >
+          {/* Floating Top Right Close Button for Mobile Accessibility */}
+          <button
+            type='button'
+            onClick={onClose}
+            className='fixed top-4 right-4 z-[10000] flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-black/80 text-white shadow-2xl backdrop-blur-md transition-transform hover:scale-110 active:scale-95'
+            aria-label='Close video'
+          >
+            <X size={24} />
+          </button>
+
           {/* Modal Container */}
           <motion.div
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -103,7 +113,7 @@ export function VideoModal({ video, onClose }) {
           >
             {/* Top Bar */}
             <div className='flex w-full items-center justify-between border-b border-white/10 px-5 py-4 text-white'>
-              <span className='text-sm font-semibold tracking-wide text-neutral-200'>
+              <span className='text-sm font-semibold tracking-wide text-neutral-200 truncate pr-4'>
                 {video.title || 'K Charan Portfolio Video'}
               </span>
               <button
