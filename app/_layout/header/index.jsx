@@ -11,14 +11,15 @@ import { slideUp } from './variants';
 export function Header() {
   return (
     <motion.header
-      className='relative h-[75vh] sm:h-[85vh] md:h-screen overflow-hidden bg-secondary-foreground text-background'
+      className='relative h-screen overflow-hidden bg-neutral-950 text-background'
       variants={slideUp}
       initial='initial'
       animate='enter'
     >
+      {/* Mobile-optimized unzoomed portrait framing */}
       <Image
         src='/images/hero.png?v=3'
-        className='object-cover object-[center_15%] scale-[0.88] sm:scale-100 transition-transform duration-300 sm:object-center'
+        className='object-contain sm:object-cover object-top sm:object-center transition-transform duration-300'
         fill={true}
         sizes='100vw'
         alt='Charan'
