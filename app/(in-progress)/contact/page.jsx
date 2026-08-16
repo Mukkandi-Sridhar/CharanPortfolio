@@ -122,7 +122,7 @@ export default function ContactPage() {
                 <div className='space-y-4 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-8 text-center text-emerald-300'>
                   <CheckCircle size={48} className='mx-auto text-emerald-400' />
                   <h4 className='text-xl font-bold'>Message Sent!</h4>
-                  <p className='text-sm text-emerald-200'>Opening WhatsApp to connect with Kurni Charan Kumar...</p>
+                  <p className='text-sm text-emerald-200'>Opening WhatsApp to connect with Charan...</p>
                   {waLink && (
                     <a
                       href={waLink}

@@ -13,11 +13,11 @@ export function NavbarBrand() {
         <h5 className='transition-transform duration-500 ease-in-expo group-hover:-translate-x-full'>
           Edited by
         </h5>
-        <h5 className='ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-24'>
-          Kurni
+        <h5 className='ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-20'>
+          Charan
         </h5>
-        <h5 className='absolute left-32 ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-24'>
-          Charan Kumar
+        <h5 className='absolute left-28 ps-1 transition-transform duration-500 ease-in-expo group-hover:-translate-x-20'>
+          Kumar
         </h5>
       </div>
     </div>

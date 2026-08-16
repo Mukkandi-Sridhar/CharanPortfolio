@@ -26,7 +26,7 @@ export function UserDetails({ transformX }) {
               className='rounded-full object-cover'
               fill={true}
               sizes='100px'
-              alt='Kurni Charan Kumar Profile Picture'
+              alt='Charan Profile Picture'
             />
           </ImageWrapper>
           <MainTitle>Let’s work</MainTitle>
