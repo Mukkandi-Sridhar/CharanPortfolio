@@ -80,7 +80,7 @@ export function UserDetails({ transformX }) {
             <MagneticButton
               variant='outline'
               size='md'
-              className='w-full border-emerald-500/40 bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500 hover:text-black hover:border-emerald-500 px-4 py-4 text-xs sm:px-6 sm:py-6 sm:text-sm font-semibold transition-all flex items-center justify-center gap-2'
+              className='w-full border-emerald-500/40 bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500 hover:text-black hover:border-emerald-500 px-4 py-4 text-xs sm:px-6 sm:py-6 sm:text-sm font-semibold transition-all flex items-center justify-center gap-2 whitespace-nowrap'
             >
               <MessageSquare size={16} /> WhatsApp Chat
             </MagneticButton>
