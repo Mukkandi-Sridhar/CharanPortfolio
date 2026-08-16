@@ -16,10 +16,9 @@ export function Header() {
       initial='initial'
       animate='enter'
     >
-      {/* Mobile-optimized unzoomed portrait framing */}
       <Image
         src='/images/hero.png?v=3'
-        className='object-contain sm:object-cover object-top sm:object-center transition-transform duration-300'
+        className='object-cover object-top sm:object-center transition-transform duration-300'
         fill={true}
         sizes='100vw'
         alt='Charan'
