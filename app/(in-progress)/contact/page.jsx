@@ -56,13 +56,13 @@ export default function ContactPage() {
 
             {/* Direct Contact Cards */}
             <div className='space-y-6 lg:col-span-5'>
-              <div className='space-y-6 rounded-3xl border border-white/10 bg-neutral-900/50 p-8 backdrop-blur-md'>
-                <h3 className='text-xl font-bold text-white'>Direct Contact Details</h3>
+              <div className='space-y-6 rounded-3xl border border-white/15 bg-neutral-900/90 p-8 shadow-2xl backdrop-blur-xl'>
+                <h3 className='text-xl font-bold text-white tracking-wide'>Direct Contact Details</h3>
 
                 <div className='space-y-4'>
                   <a
                     href='mailto:charannedit82@gmail.com'
-                    className='group flex items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 transition-colors hover:bg-white/10'
+                    className='group flex items-center gap-4 rounded-2xl border border-white/10 bg-neutral-950/70 p-4 transition-all hover:border-white/30 hover:bg-neutral-950 shadow-md'
                   >
                     <div className='flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white transition-transform group-hover:scale-110'>
                       <Mail size={20} />
@@ -75,7 +75,7 @@ export default function ContactPage() {
 
                   <a
                     href='tel:+918790792645'
-                    className='group flex items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 transition-colors hover:bg-white/10'
+                    className='group flex items-center gap-4 rounded-2xl border border-white/10 bg-neutral-950/70 p-4 transition-all hover:border-white/30 hover:bg-neutral-950 shadow-md'
                   >
                     <div className='flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white transition-transform group-hover:scale-110'>
                       <Phone size={20} />
@@ -90,7 +90,7 @@ export default function ContactPage() {
                     href='https://wa.me/918790792645'
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='group flex items-center gap-4 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4 transition-colors hover:bg-emerald-500/20'
+                    className='group flex items-center gap-4 rounded-2xl border border-emerald-500/40 bg-emerald-950/40 p-4 transition-all hover:border-emerald-400 hover:bg-emerald-950/70 shadow-md'
                   >
                     <div className='flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400 transition-transform group-hover:scale-110'>
                       <Send size={20} />
@@ -101,7 +101,7 @@ export default function ContactPage() {
                     </div>
                   </a>
 
-                  <div className='flex items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4'>
+                  <div className='flex items-center gap-4 rounded-2xl border border-white/10 bg-neutral-950/70 p-4 shadow-md'>
                     <div className='flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white'>
                       <MapPin size={20} />
                     </div>
@@ -114,12 +114,12 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Form */}
-            <div className='space-y-8 rounded-3xl border border-white/10 bg-neutral-950 p-8 shadow-2xl sm:p-12 lg:col-span-7'>
-              <h3 className='text-2xl font-bold text-white'>Send A Message</h3>
+            {/* Form Box */}
+            <div className='space-y-8 rounded-3xl border border-white/15 bg-neutral-900/90 p-8 shadow-2xl backdrop-blur-xl sm:p-12 lg:col-span-7'>
+              <h3 className='text-2xl font-bold text-white tracking-wide'>Send A Message</h3>
 
               {submitted ? (
-                <div className='space-y-4 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-8 text-center text-emerald-300'>
+                <div className='space-y-4 rounded-2xl border border-emerald-500/40 bg-emerald-950/40 p-8 text-center text-emerald-300 shadow-xl'>
                   <CheckCircle size={48} className='mx-auto text-emerald-400' />
                   <h4 className='text-xl font-bold'>Message Sent!</h4>
                   <p className='text-sm text-emerald-200'>Opening WhatsApp to connect with Charan...</p>
@@ -144,7 +144,7 @@ export default function ContactPage() {
                       placeholder='John Doe'
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className='w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder-neutral-500 transition-colors focus:border-white/40 focus:outline-none'
+                      className='w-full rounded-2xl border border-white/15 bg-neutral-950/80 px-5 py-4 text-white placeholder-neutral-500 transition-all focus:border-emerald-400 focus:bg-neutral-950 focus:ring-1 focus:ring-emerald-400/40 focus:outline-none shadow-inner'
                     />
                   </div>
 
@@ -156,7 +156,7 @@ export default function ContactPage() {
                       placeholder='john@example.com'
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className='w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder-neutral-500 transition-colors focus:border-white/40 focus:outline-none'
+                      className='w-full rounded-2xl border border-white/15 bg-neutral-950/80 px-5 py-4 text-white placeholder-neutral-500 transition-all focus:border-emerald-400 focus:bg-neutral-950 focus:ring-1 focus:ring-emerald-400/40 focus:outline-none shadow-inner'
                     />
                   </div>
 
@@ -170,8 +170,8 @@ export default function ContactPage() {
                           onClick={() => setFormData({ ...formData, projectType: type })}
                           className={`rounded-xl border p-3 text-center text-xs font-semibold transition-all ${
                             formData.projectType === type
-                              ? 'border-white bg-white font-bold text-black'
-                              : 'border-white/10 bg-white/5 text-neutral-400 hover:border-white/30 hover:text-white'
+                              ? 'border-emerald-400 bg-emerald-500 font-bold text-black shadow-md shadow-emerald-500/20'
+                              : 'border-white/15 bg-neutral-950/60 text-neutral-300 hover:border-white/30 hover:bg-neutral-950 hover:text-white'
                           }`}
                         >
                           {type}
@@ -188,7 +188,7 @@ export default function ContactPage() {
                       placeholder='Tell me about your video project, goals, and timeline...'
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className='w-full resize-none rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder-neutral-500 transition-colors focus:border-white/40 focus:outline-none'
+                      className='w-full resize-none rounded-2xl border border-white/15 bg-neutral-950/80 px-5 py-4 text-white placeholder-neutral-500 transition-all focus:border-emerald-400 focus:bg-neutral-950 focus:ring-1 focus:ring-emerald-400/40 focus:outline-none shadow-inner'
                     />
                   </div>
 
