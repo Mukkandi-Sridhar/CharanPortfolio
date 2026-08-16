@@ -18,10 +18,10 @@ export function Header() {
     >
       <Image
         src='/images/hero.png'
-        className='object-cover object-center'
+        className='object-cover object-top sm:object-center'
         fill={true}
         sizes='100vw'
-        alt='Kurni Charan Kumar'
+        alt='Charan'
         priority
       />
 

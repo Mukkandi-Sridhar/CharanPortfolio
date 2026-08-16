@@ -20,10 +20,10 @@ export function UserDetails({ transformX }) {
     <Container>
       <Row>
         <div className='flex items-center gap-4 sm:gap-8'>
-          <ImageWrapper>
+          <ImageWrapper className='overflow-hidden rounded-full border border-white/20 shadow-lg'>
             <Image
               src='/images/profile.png'
-              className='rounded-full object-cover'
+              className='rounded-full object-cover object-center'
               fill={true}
               sizes='100px'
               alt='Charan Profile Picture'

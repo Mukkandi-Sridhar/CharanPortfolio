@@ -29,7 +29,7 @@ export default function About() {
                 Turning raw footage into <span className='italic text-neutral-400'>scroll-stopping</span> stories.
               </h1>
               <p className='text-lg leading-relaxed text-muted-foreground sm:text-xl'>
-                Hi, I’m <strong className='font-semibold text-foreground'>Kurni Charan Kumar</strong>. I’m a passionate Video Editor focused on creating high-engagement content that keeps viewers hooked from the first second to the last.
+                Hi, I’m <strong className='font-semibold text-foreground'>Charan</strong>. I’m a passionate Video Editor focused on creating high-engagement content that keeps viewers hooked from the first second to the last.
               </p>
               <div className='flex flex-wrap gap-4 pt-4'>
                 <Link href='/work'>
@@ -46,12 +46,12 @@ export default function About() {
             </div>
 
             <div className='relative flex justify-center lg:col-span-5'>
-              <div className='group relative h-72 w-72 overflow-hidden rounded-3xl border border-white/10 shadow-2xl sm:h-96 sm:w-96'>
+              <div className='group relative h-72 w-72 overflow-hidden rounded-3xl border border-white/15 shadow-2xl sm:h-96 sm:w-96'>
                 <Image
                   src='/images/profile.png'
-                  alt='Kurni Charan Kumar'
+                  alt='Charan'
                   fill
-                  className='object-cover transition-transform duration-700 group-hover:scale-105'
+                  className='object-cover object-top transition-transform duration-700 group-hover:scale-105'
                 />
                 <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent' />
                 <div className='absolute bottom-6 left-6 right-6 text-white'>
