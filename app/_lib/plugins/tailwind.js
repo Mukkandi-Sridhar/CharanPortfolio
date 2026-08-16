@@ -6,8 +6,8 @@ export const tailwindPlugin = plugin(
   function ({ addBase }) {
     addBase({
       ':root': {
-        '--background': '225 7% 10%',
-        '--foreground': '0 0% 98%',
+        '--background': '0 0% 100%',
+        '--foreground': '225 7% 12%',
         '--card': '0 0% 100%',
         '--card-foreground': '225 7% 12%',
         '--popover': '0 0% 100%',

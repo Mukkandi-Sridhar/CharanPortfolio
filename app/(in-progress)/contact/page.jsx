@@ -140,7 +140,6 @@ export default function ContactPage() {
                     <label className='text-xs font-semibold uppercase tracking-wider text-neutral-300'>Your Name</label>
                     <input
                       type='text'
-                      required
                       placeholder='John Doe'
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -152,7 +151,6 @@ export default function ContactPage() {
                     <label className='text-xs font-semibold uppercase tracking-wider text-neutral-300'>Your Email</label>
                     <input
                       type='email'
-                      required
                       placeholder='john@example.com'
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -184,7 +182,6 @@ export default function ContactPage() {
                     <label className='text-xs font-semibold uppercase tracking-wider text-neutral-300'>Project Details</label>
                     <textarea
                       rows={4}
-                      required
                       placeholder='Tell me about your video project, goals, and timeline...'
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -199,9 +196,6 @@ export default function ContactPage() {
                     >
                       <Send size={18} /> Send & Connect via WhatsApp
                     </button>
-                    <p className='text-center text-[11px] text-neutral-400'>
-                      ⚡ Submitting redirects directly to WhatsApp with prefilled message
-                    </p>
                   </div>
                 </form>
               )}
