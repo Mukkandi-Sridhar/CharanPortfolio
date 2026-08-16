@@ -30,7 +30,7 @@ export function Header() {
 
       <div className='relative flex h-full flex-col justify-end gap-2 md:flex-col-reverse md:justify-normal z-10'>
         <div className='select-none'>
-          <h1 className='text-[clamp(3.2rem,14vw,9rem)] text-white drop-shadow-lg tracking-tight'>
+          <h1 className='text-[clamp(2.5rem,7vw,5.5rem)] text-white drop-shadow-lg tracking-tight'>
             <ParallaxSlider repeat={4} baseVelocity={2}>
               <span className='pe-8 sm:pe-12'>
                 Kurni Charan Kumar
