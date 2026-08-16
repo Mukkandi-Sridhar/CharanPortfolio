@@ -17,6 +17,6 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h4`
-  font-size: clamp(1.5em, 2.2vw, 3em);
+  font-size: clamp(1.2rem, 1.8vw, 2.1rem);
   line-height: 1.45;
 `;

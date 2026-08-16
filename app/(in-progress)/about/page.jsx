@@ -25,7 +25,7 @@ export default function About() {
               <div className='inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary'>
                 <Sparkles size={14} /> Short-Form Video Specialist
               </div>
-              <h1 className='text-4xl font-bold leading-tight tracking-tight sm:text-6xl'>
+              <h1 className='text-3xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl'>
                 Turning raw footage into <span className='italic text-neutral-400'>scroll-stopping</span> stories.
               </h1>
               <p className='text-lg leading-relaxed text-muted-foreground sm:text-xl'>

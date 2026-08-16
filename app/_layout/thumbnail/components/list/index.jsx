@@ -22,8 +22,8 @@ export function ThumbnailList({
         key={`thumbnail-list-${id}`}
         className='border-t border-solid transition-all last-of-type:border-b group-hover:opacity-90'
         style={{
-          paddingInline: 'calc(clamp(1em,3vw,4em) * 2)',
-          paddingBlock: 'clamp(1em,3vw,4em)',
+          paddingInline: 'clamp(1rem, 3vw, 2.5rem)',
+          paddingBlock: 'clamp(1rem, 2vw, 1.5rem)',
         }}
         onPointerEnter={({ clientX, clientY }) => {
           handlePointerEnter(id);
@@ -41,7 +41,7 @@ export function ThumbnailList({
         >
           <h4
             style={{
-              fontSize: 'calc(clamp(3.25em, 7vw, 8em) * 0.75)',
+              fontSize: 'clamp(1.4rem, 2.5vw, 2.5rem)',
             }}
           >
             {title}

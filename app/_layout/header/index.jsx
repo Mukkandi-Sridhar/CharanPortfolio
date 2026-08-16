@@ -41,12 +41,12 @@ export function Header() {
         </div>
 
         <div className='md:ml-auto'>
-          <div className='mx-10 max-md:my-12 md:mx-36 text-white'>
-            <div className='mb-4 md:mb-20'>
+          <div className='mx-6 my-8 sm:mx-12 md:mx-20 lg:mx-28 text-white'>
+            <div className='mb-3 md:mb-8'>
               <MoveDownRight size={28} strokeWidth={1.25} />
             </div>
 
-            <h4 className='text-[clamp(1.55em,2.5vw,2.75em)] font-medium drop-shadow-md'>
+            <h4 className='text-[clamp(1.1rem,1.8vw,1.8rem)] font-medium drop-shadow-md'>
               <span className='block'>Video Editor</span>
               <span className='block'>Short-Form Content Specialist</span>
             </h4>

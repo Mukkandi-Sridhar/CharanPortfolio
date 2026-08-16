@@ -44,7 +44,7 @@ export default function ContactPage() {
             <div className='inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary'>
               <Sparkles size={14} /> Start A Project
             </div>
-            <h1 className='text-4xl font-bold tracking-tight sm:text-6xl'>
+            <h1 className='text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl'>
               Let’s turn your ideas into <span className='italic text-neutral-400'>high-impact videos</span>.
             </h1>
             <p className='text-lg leading-relaxed text-muted-foreground'>

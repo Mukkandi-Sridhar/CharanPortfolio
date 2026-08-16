@@ -36,7 +36,7 @@ export default function Work() {
             <div className='inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary'>
               <Film size={14} /> Portfolio & Showcase
             </div>
-            <h1 className='text-4xl font-bold tracking-tight sm:text-6xl'>
+            <h1 className='text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl'>
               Crafted for maximum <span className='italic text-neutral-400'>watch time & reach</span>.
             </h1>
             <p className='text-lg leading-relaxed text-muted-foreground'>
