@@ -15,13 +15,22 @@ export default function ContactPage() {
     message: '',
   });
 
+  const [waLink, setWaLink] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const text = `Hi Charan! 👋\n\nName: ${formData.name}\nEmail: ${formData.email}\nProject Type: ${formData.projectType}\n\nProject Details: ${formData.message}`;
+    const url = `https://wa.me/918790792645?text=${encodeURIComponent(text)}`;
+    setWaLink(url);
     setSubmitted(true);
+    
+    // Redirect to WhatsApp
+    window.open(url, '_blank');
+
     setTimeout(() => {
       setSubmitted(false);
       setFormData({ name: '', email: '', projectType: 'Instagram Reels', message: '' });
-    }, 4000);
+    }, 6000);
   };
 
   return (
@@ -77,6 +86,21 @@ export default function ContactPage() {
                     </div>
                   </a>
 
+                  <a
+                    href='https://wa.me/918790792645'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='group flex items-center gap-4 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4 transition-colors hover:bg-emerald-500/20'
+                  >
+                    <div className='flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400 transition-transform group-hover:scale-110'>
+                      <Send size={20} />
+                    </div>
+                    <div>
+                      <p className='text-xs font-semibold uppercase tracking-wider text-emerald-300'>WhatsApp</p>
+                      <p className='text-sm font-medium text-emerald-100 sm:text-base'>Chat Directly (+91 87907 92645)</p>
+                    </div>
+                  </a>
+
                   <div className='flex items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4'>
                     <div className='flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-white'>
                       <MapPin size={20} />
@@ -95,10 +119,20 @@ export default function ContactPage() {
               <h3 className='text-2xl font-bold text-white'>Send A Message</h3>
 
               {submitted ? (
-                <div className='space-y-3 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-8 text-center text-emerald-300'>
+                <div className='space-y-4 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-8 text-center text-emerald-300'>
                   <CheckCircle size={48} className='mx-auto text-emerald-400' />
                   <h4 className='text-xl font-bold'>Message Sent!</h4>
-                  <p className='text-sm text-emerald-200'>Thank you! Kurni Charan Kumar will get back to you shortly.</p>
+                  <p className='text-sm text-emerald-200'>Opening WhatsApp to connect with Kurni Charan Kumar...</p>
+                  {waLink && (
+                    <a
+                      href={waLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-6 py-3 text-xs font-bold uppercase tracking-wider text-black shadow-lg hover:bg-emerald-400 transition-colors'
+                    >
+                      <Send size={16} /> Open WhatsApp Directly
+                    </a>
+                  )}
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className='space-y-6'>
@@ -158,12 +192,17 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <button
-                    type='submit'
-                    className='flex w-full items-center justify-center gap-2 rounded-2xl bg-white py-4 text-sm font-bold uppercase tracking-wider text-black shadow-xl transition-colors hover:bg-neutral-200'
-                  >
-                    <Send size={18} /> Send Message
-                  </button>
+                  <div className='space-y-2'>
+                    <button
+                      type='submit'
+                      className='flex w-full items-center justify-center gap-2 rounded-2xl bg-white py-4 text-sm font-bold uppercase tracking-wider text-black shadow-xl transition-all hover:bg-neutral-200 active:scale-[0.99]'
+                    >
+                      <Send size={18} /> Send & Connect via WhatsApp
+                    </button>
+                    <p className='text-center text-[11px] text-neutral-400'>
+                      ⚡ Submitting redirects directly to WhatsApp with prefilled message
+                    </p>
+                  </div>
                 </form>
               )}
             </div>

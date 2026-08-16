@@ -45,13 +45,13 @@ export function Project() {
   });
 
   return (
-    <section ref={containerRef} className='relative z-10 mt-14'>
+    <section ref={containerRef} className='relative z-10 mt-10 overflow-hidden sm:mt-14'>
       <div className='grid items-center'>
-        <div className='bg-background'>
+        <div className='bg-background overflow-hidden py-2'>
           <motion.div
-            className='mb-10 flex gap-10'
+            className='mb-4 flex gap-3 sm:mb-8 sm:gap-6 md:mb-10 md:gap-10'
             style={{
-              width: '120vw',
+              width: '160vw',
               x: transformX1,
             }}
           >
@@ -59,9 +59,9 @@ export function Project() {
           </motion.div>
 
           <motion.div
-            className='mb-10 flex gap-10'
+            className='mb-4 flex gap-3 sm:mb-8 sm:gap-6 md:mb-10 md:gap-10'
             style={{
-              width: '120vw',
+              width: '160vw',
               x: transformX2,
             }}
           >

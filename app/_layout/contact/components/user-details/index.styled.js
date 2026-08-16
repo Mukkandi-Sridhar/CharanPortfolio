@@ -5,8 +5,12 @@ import { styled } from 'styled-components';
 const containerValue = ({ theme }) => theme?.breakpoints?.container;
 
 export const Container = styled.div`
-  padding-inline: calc(clamp(2.5em, 8vw, 8em) * 2);
+  padding-inline: clamp(1.25em, 5vw, 6em);
   margin-inline: auto;
+
+  @media screen and (min-width: 768px) {
+    padding-inline: calc(clamp(2.5em, 6vw, 8em) * 1.5);
+  }
 
   @media screen and (min-width: ${containerValue}) {
     max-width: ${containerValue};
@@ -14,26 +18,29 @@ export const Container = styled.div`
 `;
 
 export const Row = styled.div`
-  --default-padding: clamp(5em, 21vh, 12em);
+  --default-padding: clamp(3em, 12vh, 10em);
 
   &:nth-child(1) {
     padding-block-end: calc(var(--default-padding) / 2);
   }
 
   &:nth-child(2) {
-    padding-block-end: calc(var(--default-padding) * 0.5);
+    padding-block-end: calc(var(--default-padding) * 0.4);
   }
 `;
 
 export const ImageWrapper = styled.div`
-  --image-size: clamp(4.5em, 6.5vw, 8em);
+  --image-size: clamp(3.5em, 6.5vw, 8em);
 
   position: relative;
   width: var(--image-size);
   height: var(--image-size);
+  flex-shrink: 0;
 `;
 
 export const MainTitle = styled.h2`
-  font-size: calc(clamp(3.25em, 7vw, 8em) * 0.875);
+  font-size: clamp(2.25em, 7.5vw, 7em);
   line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 `;

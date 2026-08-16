@@ -1,11 +1,14 @@
-// TODO: replace with K Charan's real profile URL
 export const socialMedias = [
   {
-    href: '#',
+    href: 'https://instagram.com',
     title: 'Instagram',
   },
   {
-    href: '#',
+    href: 'https://youtube.com',
     title: 'YouTube',
+  },
+  {
+    href: 'https://wa.me/918790792645',
+    title: 'WhatsApp',
   },
 ];
