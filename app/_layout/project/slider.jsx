@@ -40,9 +40,8 @@ export function ProjectSlider({ type = 'video', source, title, onSelect }) {
 
   return (
     <Center
-      className='group relative w-[145px] shrink-0 overflow-hidden rounded-2xl border border-white/10 shadow-lg transition-all duration-500 hover:scale-[1.03] hover:border-white/20 hover:shadow-2xl cursor-pointer sm:w-1/4 max-md:min-w-[140px]'
+      className='group relative shrink-0 overflow-hidden rounded-2xl border border-white/10 shadow-lg transition-all duration-500 hover:scale-[1.04] hover:border-white/20 hover:shadow-2xl cursor-pointer w-[clamp(140px,42vw,170px)] sm:w-[200px] md:w-[220px] lg:w-[240px]'
       style={{
-        minWidth: 'clamp(135px, 42vw, 220px)',
         aspectRatio: '9 / 16',
         height: 'auto',
       }}
