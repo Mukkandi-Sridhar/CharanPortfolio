@@ -22,7 +22,7 @@ export function UserDetails({ transformX }) {
         <div className='flex items-center gap-4 sm:gap-8'>
           <ImageWrapper className='overflow-hidden rounded-full border border-white/20 shadow-lg'>
             <Image
-              src='/images/profile.png'
+              src='/images/profile.png?v=3'
               className='rounded-full object-cover object-center'
               fill={true}
               sizes='100px'

@@ -48,7 +48,7 @@ export default function About() {
             <div className='relative flex justify-center lg:col-span-5'>
               <div className='group relative h-72 w-72 overflow-hidden rounded-3xl border border-white/15 shadow-2xl sm:h-96 sm:w-96'>
                 <Image
-                  src='/images/profile.png'
+                  src='/images/profile.png?v=3'
                   alt='Charan'
                   fill
                   className='object-cover object-top transition-transform duration-700 group-hover:scale-105'

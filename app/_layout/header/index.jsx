@@ -17,7 +17,7 @@ export function Header() {
       animate='enter'
     >
       <Image
-        src='/images/hero.png'
+        src='/images/hero.png?v=3'
         className='object-cover object-top sm:object-center'
         fill={true}
         sizes='100vw'
