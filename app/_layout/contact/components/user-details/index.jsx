@@ -56,13 +56,13 @@ export function UserDetails({ transformX }) {
 
       <Row>
         <div className='grid grid-cols-1 sm:grid-cols-3 gap-3 w-full pt-4'>
-          <a href='mailto:charannedit82@gmail.com' className='block w-full'>
+          <a href='mailto:charanedit82@gmail.com' className='block w-full'>
             <MagneticButton
               variant='outline'
               size='md'
               className='w-full border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/40 truncate px-4 py-4 text-xs sm:px-6 sm:py-6 sm:text-sm font-medium transition-all'
             >
-              charannedit82@gmail.com
+              charanedit82@gmail.com
             </MagneticButton>
           </a>
 
