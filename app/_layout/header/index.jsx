@@ -18,7 +18,7 @@ export function Header() {
     >
       <Image
         src='/images/hero.png?v=3'
-        className='object-cover object-top sm:object-center'
+        className='object-cover object-[center_15%] scale-[0.88] sm:scale-100 transition-transform duration-300 sm:object-center'
         fill={true}
         sizes='100vw'
         alt='Charan'
