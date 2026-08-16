@@ -22,31 +22,25 @@ export function Project() {
   const firstItems = [...projectOptions.first, ...projectOptions.first];
   const secondItems = [...projectOptions.second, ...projectOptions.second];
 
-  const firstSlider = firstItems.map(({ type, source, title }, idx) => {
-    const id = `${randomId()}-${idx}`;
-    return (
-      <ProjectSlider
-        key={id}
-        type={type}
-        source={source}
-        title={title}
-        onSelect={() => setSelectedVideo({ source, title })}
-      />
-    );
-  });
+  const firstSlider = firstItems.map(({ type, source, title }, idx) => (
+    <ProjectSlider
+      key={`first-${source}-${idx}`}
+      type={type}
+      source={source}
+      title={title}
+      onSelect={() => setSelectedVideo({ source, title })}
+    />
+  ));
 
-  const secondSlider = secondItems.map(({ type, source, title }, idx) => {
-    const id = `${randomId()}-${idx}`;
-    return (
-      <ProjectSlider
-        key={id}
-        type={type}
-        source={source}
-        title={title}
-        onSelect={() => setSelectedVideo({ source, title })}
-      />
-    );
-  });
+  const secondSlider = secondItems.map(({ type, source, title }, idx) => (
+    <ProjectSlider
+      key={`second-${source}-${idx}`}
+      type={type}
+      source={source}
+      title={title}
+      onSelect={() => setSelectedVideo({ source, title })}
+    />
+  ));
 
   return (
     <section ref={containerRef} className='relative z-10 mt-10 overflow-hidden sm:mt-14'>

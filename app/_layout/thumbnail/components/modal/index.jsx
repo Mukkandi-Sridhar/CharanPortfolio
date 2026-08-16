@@ -17,20 +17,17 @@ export const ThumbnailModal = forwardRef(
    * @param {import('react').ForwardedRef<HTMLElement>} ref
    */
   function ThumbnailModal({ variants, active, index, ...props }, ref) {
-    const items = thumbnailOptions.map(({ title, image }) => {
-      const id = randomId();
-      return (
-        <Center key={id} className='relative h-full w-full'>
-          <Image
-            src={image}
-            fill={true}
-            sizes='320px'
-            className='object-cover'
-            alt={`${title} thumbnail image`}
-          />
-        </Center>
-      );
-    });
+    const items = thumbnailOptions.map(({ title, image }) => (
+      <Center key={title} className='relative h-full w-full'>
+        <Image
+          src={image}
+          fill={true}
+          sizes='320px'
+          className='object-cover'
+          alt={`${title} thumbnail image`}
+        />
+      </Center>
+    ));
 
     return (
       <MotionComponent

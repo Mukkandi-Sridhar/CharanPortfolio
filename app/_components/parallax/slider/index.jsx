@@ -14,10 +14,9 @@ export function ParallaxSlider({ children, repeat = 2, baseVelocity }) {
   return (
     <div className='flex flex-nowrap overflow-hidden whitespace-nowrap'>
       <motion.div style={{ x }}>
-        {Array.from({ length: repeat }, () => {
-          const id = randomId();
-          return <Fragment key={id}>{children}</Fragment>;
-        })}
+        {Array.from({ length: repeat }, (_, i) => (
+          <Fragment key={i}>{children}</Fragment>
+        ))}
       </motion.div>
     </div>
   );
